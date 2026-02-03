@@ -10,7 +10,7 @@
         *{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth}
         body{font-family:'Montserrat',sans-serif;background:var(--pfc-dark);color:var(--pfc-white);line-height:1.6}
-        
+
         /* NAV */
         nav{position:fixed;top:0;left:0;width:100%;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;z-index:1000;background:transparent;transition:all .3s}
         nav.scrolled{background:rgba(0,32,91,.95);box-shadow:0 2px 20px rgba(0,0,0,.3)}
@@ -22,7 +22,7 @@
         .nav-links a:hover{background:rgba(196,167,105,.2);color:var(--pfc-gold)}
         .nav-burger{display:none;flex-direction:column;gap:4px;cursor:pointer}
         .nav-burger span{width:22px;height:2px;background:var(--pfc-white);transition:all .3s}
-        
+
         /* HERO */
         .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--pfc-blue) 0%,var(--pfc-blue-dark) 50%,#000814 100%);position:relative;padding:2rem}
         .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 80%,rgba(196,167,105,.1) 0%,transparent 50%)}
@@ -31,13 +31,14 @@
         .hero-logo{width:140px;height:140px;margin:0 auto 1.5rem;display:block}
         .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,6vw,4rem);margin-bottom:1rem}
         .hero h1 span{display:block;color:var(--pfc-gold);font-size:.5em;letter-spacing:.15em}
-        .hero p{font-size:.95rem;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto 2rem}
+        .hero p{font-size:.95rem;color:rgba(255,255,255,.8);max-width:600px;margin:0 auto 1rem}
+        .hero-authors{font-size:.75rem;color:rgba(255,255,255,.5);margin-bottom:2rem}
         .btn{display:inline-block;padding:.9rem 2rem;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border-radius:4px;transition:all .3s;margin:.3rem}
         .btn-primary{background:var(--pfc-gold);color:var(--pfc-blue-dark)}
         .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(196,167,105,.3)}
         .btn-secondary{border:2px solid rgba(255,255,255,.3);color:var(--pfc-white)}
         .btn-secondary:hover{border-color:var(--pfc-gold);color:var(--pfc-gold)}
-        
+
         /* SECTIONS */
         section{padding:5rem 4%}
         .section-header{text-align:center;margin-bottom:3rem}
@@ -46,9 +47,10 @@
         .section-desc{max-width:700px;margin:0 auto;color:rgba(255,255,255,.7);font-size:.9rem}
         .alt-bg{background:linear-gradient(135deg,var(--pfc-blue) 0%,var(--pfc-blue-dark) 100%)}
         .dark-bg{background:var(--pfc-dark)}
-        
+
         /* CARDS */
         .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto}
+        .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:1200px;margin:0 auto}
         .card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:1.8rem;transition:all .3s}
         .card:hover{transform:translateY(-5px);border-color:rgba(196,167,105,.3)}
         .card-value{font-family:'Bebas Neue',sans-serif;font-size:2.5rem;color:var(--pfc-gold);line-height:1}
@@ -58,7 +60,19 @@
         .status-danger{background:rgba(239,68,68,.2);color:#ef4444}
         .status-warning{background:rgba(234,179,8,.2);color:#eab308}
         .status-success{background:rgba(34,197,94,.2);color:#22c55e}
-        
+
+        /* NUMBERED CARDS */
+        .numbered-card{background:rgba(0,32,91,.4);border:1px solid rgba(59,130,246,.3);border-radius:10px;padding:1.5rem;position:relative}
+        .numbered-card .number{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--pfc-blue);border:2px solid rgba(59,130,246,.5);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;color:var(--pfc-white)}
+        .numbered-card h4{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--pfc-gold);margin:1rem 0 .5rem}
+        .numbered-card p{font-size:.8rem;color:rgba(255,255,255,.8)}
+
+        /* AMBITIONS */
+        .ambitions-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1000px;margin:2rem auto 0}
+        .ambition-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:1rem;text-align:center}
+        .ambition-card h5{font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:var(--pfc-gold);margin-bottom:.3rem}
+        .ambition-card p{font-size:.7rem;color:rgba(255,255,255,.7)}
+
         /* SWOT */
         .swot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
         .swot-card{padding:1.5rem;border-radius:10px}
@@ -74,7 +88,7 @@
         .swot-list{list-style:none}
         .swot-list li{padding:.3rem 0;font-size:.8rem;color:rgba(255,255,255,.85)}
         .swot-list li::before{content:'• ';color:var(--pfc-gold)}
-        
+
         /* DAS */
         .das-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
         .das-card{background:rgba(0,32,91,.4);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:1.5rem;position:relative;overflow:hidden}
@@ -87,14 +101,14 @@
         .das-badge.invest{background:rgba(34,197,94,.2);color:#22c55e}
         .das-badge.select{background:rgba(234,179,8,.2);color:#eab308}
         .das-badge.maintain{background:rgba(239,68,68,.2);color:#ef4444}
-        
+
         /* TABLES */
         .table-wrap{max-width:1000px;margin:1.5rem auto;overflow-x:auto}
         .data-table{width:100%;border-collapse:collapse;font-size:.85rem}
         .data-table th,.data-table td{padding:.8rem 1rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
         .data-table th{background:rgba(196,167,105,.15);color:var(--pfc-gold);font-size:.7rem;text-transform:uppercase;letter-spacing:.05em}
         .data-table tr:hover{background:rgba(255,255,255,.03)}
-        
+
         /* KPI TABS */
         .kpi-tabs{display:flex;justify-content:center;gap:.5rem;margin-bottom:2rem;flex-wrap:wrap}
         .kpi-tab{padding:.6rem 1.2rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:5px;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.7);cursor:pointer;transition:all .3s}
@@ -111,7 +125,7 @@
         .kpi-target{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--pfc-gold)}
         .kpi-bar{height:4px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
         .kpi-bar-fill{height:100%;background:var(--pfc-gold);border-radius:2px}
-        
+
         /* PLAN TABS */
         .plan-tabs{display:flex;justify-content:center;gap:1rem;margin-bottom:2rem;flex-wrap:wrap}
         .plan-tab{padding:.8rem 1.5rem;background:transparent;border:2px solid rgba(255,255,255,.2);border-radius:6px;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--pfc-white);cursor:pointer;transition:all .3s}
@@ -128,12 +142,35 @@
         .plan-list li{padding:.4rem 0;font-size:.78rem;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.05)}
         .plan-list li:last-child{border-bottom:none}
         .plan-list li::before{content:'→ ';color:var(--pfc-gold)}
-        
+
+        /* PILIERS */
+        .piliers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1000px;margin:2rem auto}
+        .pilier-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:1.5rem;text-align:center}
+        .pilier-card h4{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--pfc-gold);margin-bottom:.5rem}
+        .pilier-card p{font-size:.8rem;color:rgba(255,255,255,.8)}
+
+        /* LEVIERS */
+        .leviers-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:1100px;margin:2rem auto}
+        .levier-card{background:rgba(0,32,91,.4);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1rem;text-align:center}
+        .levier-card h5{font-family:'Bebas Neue',sans-serif;font-size:.9rem;color:var(--pfc-gold);margin-bottom:.3rem}
+        .levier-card p{font-size:.7rem;color:rgba(255,255,255,.7)}
+
+        /* RISKS */
+        .risk-table{width:100%;border-collapse:collapse;font-size:.8rem;max-width:1000px;margin:2rem auto}
+        .risk-table th,.risk-table td{padding:.8rem;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)}
+        .risk-table th{background:rgba(196,167,105,.15);color:var(--pfc-gold);font-size:.7rem;text-transform:uppercase}
+
+        /* FCS */
+        .fcs-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;max-width:1100px;margin:2rem auto}
+        .fcs-card{background:rgba(196,167,105,.08);border:1px solid rgba(196,167,105,.2);border-radius:8px;padding:1rem;text-align:center}
+        .fcs-card h5{font-family:'Bebas Neue',sans-serif;font-size:.85rem;color:var(--pfc-gold);margin-bottom:.3rem}
+        .fcs-card p{font-size:.7rem;color:rgba(255,255,255,.7)}
+
         /* CONCLUSION */
         .conclusion{text-align:center;padding:3rem 2rem;background:rgba(196,167,105,.08);border:1px solid rgba(196,167,105,.2);border-radius:15px;max-width:800px;margin:2rem auto}
         .conclusion p{font-size:1rem;font-style:italic;line-height:1.8;color:rgba(255,255,255,.9)}
         .conclusion cite{display:block;margin-top:1rem;font-style:normal;font-family:'Bebas Neue',sans-serif;color:var(--pfc-gold);letter-spacing:.1em}
-        
+
         /* FOOTER */
         footer{background:#050508;padding:3rem 4% 1.5rem}
         .footer-content{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem;padding-bottom:1.5rem;border-bottom:1px solid rgba(255,255,255,.1)}
@@ -146,7 +183,7 @@
         .footer-links a{color:rgba(255,255,255,.6);text-decoration:none;font-size:.75rem;display:block;padding:.2rem 0;transition:color .3s}
         .footer-links a:hover{color:var(--pfc-gold)}
         .footer-bottom{max-width:1100px;margin:0 auto;padding-top:1rem;text-align:center;font-size:.7rem;color:rgba(255,255,255,.4)}
-        
+
         /* POPUPS */
         .popup-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:9999;display:none;align-items:center;justify-content:center;padding:1rem}
         .popup-overlay.active{display:flex}
@@ -173,13 +210,17 @@
         .popup-card.yellow h4{color:#eab308}
         .popup-card.gold{border-color:rgba(196,167,105,.4);background:rgba(196,167,105,.08)}
         .popup-card.gold h4{color:var(--pfc-gold)}
-        
+
         /* MATRIX BUTTONS */
         .matrix-panel{position:fixed;bottom:20px;right:20px;z-index:998;background:rgba(0,20,64,.95);padding:.8rem;border-radius:10px;border:1px solid rgba(196,167,105,.3);display:flex;flex-direction:column;gap:.4rem}
         .matrix-panel-title{color:var(--pfc-gold);font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;text-align:center;margin-bottom:.3rem}
         .matrix-btn{padding:.5rem 1rem;background:rgba(196,167,105,.15);border:1px solid var(--pfc-gold);border-radius:5px;color:var(--pfc-gold);font-size:.7rem;font-weight:600;cursor:pointer;transition:all .3s;text-transform:uppercase;letter-spacing:.05em}
         .matrix-btn:hover{background:var(--pfc-gold);color:var(--pfc-blue-dark)}
-        
+
+        @media(max-width:1024px){
+            .grid-4,.ambitions-grid,.leviers-grid,.fcs-grid{grid-template-columns:repeat(2,1fr)}
+            .piliers-grid{grid-template-columns:1fr}
+        }
         @media(max-width:768px){
             .nav-links{position:fixed;top:0;right:-100%;width:70%;height:100vh;background:var(--pfc-blue-dark);flex-direction:column;justify-content:center;align-items:center;gap:1.5rem;transition:right .3s}
             .nav-links.active{right:0}
@@ -187,6 +228,7 @@
             .swot-grid,.das-grid,.plan-grid,.popup-grid-2,.popup-grid-3{grid-template-columns:1fr}
             .footer-content{grid-template-columns:1fr}
             .matrix-panel{bottom:10px;right:10px;padding:.6rem}
+            .grid-4,.ambitions-grid,.leviers-grid,.fcs-grid{grid-template-columns:1fr}
         }
     </style>
 </head>
@@ -205,6 +247,7 @@
             <li><a href="#partie5">5.Enjeux</a></li>
             <li><a href="#partie6">6.Vision</a></li>
             <li><a href="#partie7">7.Plan</a></li>
+            <li><a href="#kpis">8.KPIs</a></li>
         </ul>
         <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
     </nav>
@@ -214,8 +257,9 @@
         <div class="hero-content">
             <div class="hero-badge">Document Stratégique • Décembre 2025</div>
             <img class="hero-logo" src="paris fc logo.jpg" alt="Paris FC Logo" style="border-radius:50%">
-            <h1>Stratégie de Croissance<span>Reprise Arnault &amp; Red Bull • 2025-2028</span></h1>
+            <h1>Stratégie de Croissance et de Transformation<span>Reprise par la Famille Arnault et Red Bull • 2025-2028</span></h1>
             <p>Plan stratégique triennal pour transformer le Paris FC en acteur majeur du football français.</p>
+            <p class="hero-authors">Alexandre Ardizzi, Nolan Nadal, Elouan Collet, Victor De freitas</p>
             <div>
                 <a href="#partie1" class="btn btn-primary">Découvrir le Plan</a>
                 <a href="#partie7" class="btn btn-secondary">Plan d'Action</a>
@@ -227,15 +271,53 @@
     <section id="partie1" class="alt-bg">
         <div class="section-header">
             <span class="section-number">PARTIE 1</span>
-            <h2 class="section-title">Résumé Exécutif</h2>
-            <p class="section-desc">Synthèse du projet et diagnostic de la situation critique actuelle</p>
+            <h2 class="section-title">Résumé Exécutif : Vision et Ambitions</h2>
+            <p class="section-desc">Les points clés et les opportunités de croissance</p>
         </div>
-        <div class="grid">
-            <div class="card"><div class="card-value">130M€</div><div class="card-label">Budget Saison</div><p class="card-detail">4ème budget de Ligue 1 grâce à Agache/Arnault</p><span class="card-status status-warning">Sous-exploité</span></div>
-            <div class="card"><div class="card-value">14ème</div><div class="card-label">Classement L1</div><p class="card-detail">Position incompatible avec les moyens</p><span class="card-status status-danger">Critique</span></div>
-            <div class="card"><div class="card-value">3 pts</div><div class="card-label">Zone Rouge</div><p class="card-detail">Risque réel de relégation</p><span class="card-status status-danger">Danger</span></div>
-            <div class="card"><div class="card-value">0%</div><div class="card-label">ROI Actuel</div><p class="card-detail">Équipe de mercenaires sans projet</p><span class="card-status status-danger">Échec</span></div>
+
+        <div class="grid-4" style="margin-bottom:2rem">
+            <div class="numbered-card">
+                <div class="number">1</div>
+                <h4>Vision Synthétique</h4>
+                <p>Transformer le Paris FC en acteur majeur du football français en 3 ans, fusionnant l'excellence Red Bull et le prestige Arnault.</p>
+            </div>
+            <div class="numbered-card">
+                <div class="number">2</div>
+                <h4>Constat Critique (Déc. 2025)</h4>
+                <p>Budget de 130M€ (4ème L1) pour une 14ème place. Échec de la stratégie initiale : argent sans doctrine sportive claire, effectif hétérogène.</p>
+            </div>
+            <div class="numbered-card">
+                <div class="number">3</div>
+                <h4>Opportunité Stratégique</h4>
+                <p>Potentiel colossal : Paris, seule mégalopole européenne avec un seul club d'élite. Vivier francilien unique, forte demande pour une alternative au PSG.</p>
+            </div>
+            <div class="numbered-card">
+                <div class="number">4</div>
+                <h4>Proposition Stratégique</h4>
+                <p>Trois piliers : Révolution Sportive (méthode Red Bull), Infrastructure & Expérience (Charléty), Autonomie Économique (diversification revenus).</p>
+            </div>
         </div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.3rem;margin:2rem 0 1rem">Ambitions 2028</h3>
+        <div class="ambitions-grid">
+            <div class="ambition-card">
+                <h5>🏆 Qualification Européenne</h5>
+                <p>Ligue des Champions ou Europa League</p>
+            </div>
+            <div class="ambition-card">
+                <h5>🎓 Club Formateur N°1</h5>
+                <p>Quantité et qualité en France</p>
+            </div>
+            <div class="ambition-card">
+                <h5>✨ Marque Lifestyle Mondiale</h5>
+                <p>"Élégance de la Performance"</p>
+            </div>
+            <div class="ambition-card">
+                <h5>💰 Autonomie Financière</h5>
+                <p>Rentabilité opérationnelle hors trading</p>
+            </div>
+        </div>
+
         <div class="table-wrap" style="margin-top:2rem">
             <table class="data-table">
                 <thead><tr><th>Phase</th><th>Période</th><th>Objectif</th><th>Position</th></tr></thead>
@@ -252,24 +334,53 @@
     <section id="partie2" class="dark-bg">
         <div class="section-header">
             <span class="section-number">PARTIE 2</span>
-            <h2 class="section-title">Présentation du Contexte</h2>
-            <p class="section-desc">Situation pré-rachat, objectifs des repreneurs et marché parisien</p>
+            <h2 class="section-title">Présentation du Contexte : Avant la Reprise</h2>
+            <p class="section-desc">Un aperçu du paysage actuel du Paris FC et de son environnement</p>
         </div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin-bottom:1.5rem">Situation Initiale du Paris FC</h3>
+        <div class="grid" style="max-width:800px;margin-bottom:2rem">
+            <div class="card">
+                <ul style="list-style:none;font-size:.85rem">
+                    <li style="padding:.3rem 0">• Club historique (1969), montée récente en L1</li>
+                    <li style="padding:.3rem 0">• Budget modeste (~30M€), identité populaire</li>
+                    <li style="padding:.3rem 0">• Infrastructure vétuste (Stade Charléty)</li>
+                    <li style="padding:.3rem 0">• Actifs : Localisation Paris, potentiel territorial, histoire</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin-bottom:1.5rem">Objectifs des Repreneurs</h3>
         <div class="grid">
-            <div class="card" style="border-top:4px solid #9333ea"><div class="card-value">55%</div><div class="card-label">Famille Arnault (Agache)</div><p class="card-detail">Vision : Love Brand lifestyle. Synergies LVMH. Investissement 10+ ans.</p></div>
-            <div class="card" style="border-top:4px solid #ef4444"><div class="card-value">15%</div><div class="card-label">Red Bull GmbH</div><p class="card-detail">Vision : Méthodologie Winning Formula. Contrôle sportif. Académie mondiale.</p></div>
-            <div class="card" style="border-top:4px solid var(--pfc-gold)"><div class="card-value">30%</div><div class="card-label">Pierre Ferracci</div><p class="card-detail">Rôle : Président, garant transition. Relations institutionnelles.</p></div>
+            <div class="card" style="border-top:4px solid #9333ea">
+                <div class="card-value">55%</div>
+                <div class="card-label">Famille Arnault (Agache)</div>
+                <p class="card-detail">Créer une "Love Brand" lifestyle, synergies luxe, investissement long terme.</p>
+            </div>
+            <div class="card" style="border-top:4px solid #ef4444">
+                <div class="card-value">15%</div>
+                <div class="card-label">Red Bull GmbH</div>
+                <p class="card-detail">Implémenter la "Winning Formula", académie, trading de joueurs, style de jeu intense.</p>
+            </div>
+            <div class="card" style="border-top:4px solid var(--pfc-gold)">
+                <div class="card-value">30%</div>
+                <div class="card-label">Pierre Ferracci</div>
+                <p class="card-detail">Garant de la transition, légitimité institutionnelle, relations avec les instances.</p>
+            </div>
         </div>
-        <div class="table-wrap" style="margin-top:2rem">
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin:2rem 0 1rem">Enjeux du Marché Parisien et Francilien</h3>
+        <div class="table-wrap">
             <table class="data-table">
-                <thead><tr><th>Ville</th><th>Population</th><th>Clubs Élite</th></tr></thead>
+                <thead><tr><th>Ville</th><th>Population</th><th>Clubs Élite</th><th>Statut</th></tr></thead>
                 <tbody>
-                    <tr><td>Paris</td><td>10M</td><td>1 seul (PSG) ⚠️</td></tr>
-                    <tr><td>Londres</td><td>10M</td><td>5-7 clubs</td></tr>
-                    <tr><td>Madrid</td><td>7M</td><td>5 clubs</td></tr>
+                    <tr><td>Paris</td><td>10M</td><td>1 (PSG)</td><td style="color:var(--pfc-gold);font-weight:600">Market Gap</td></tr>
+                    <tr><td>Londres</td><td>10M</td><td>5-7</td><td>Saturé</td></tr>
+                    <tr><td>Madrid</td><td>7M</td><td>5</td><td>Saturé</td></tr>
                 </tbody>
             </table>
         </div>
+        <p style="text-align:center;font-size:.8rem;color:rgba(255,255,255,.7);max-width:800px;margin:1rem auto">Le marché parisien peut absorber un second grand club. Le vivier francilien est le 1er mondial, mais les talents sont exportés. Le PFC doit devenir le réceptacle naturel de ce talent local.</p>
     </section>
 
     <!-- PARTIE 3 -->
@@ -277,29 +388,108 @@
         <div class="section-header">
             <span class="section-number">PARTIE 3</span>
             <h2 class="section-title">Diagnostic Stratégique</h2>
-            <p class="section-desc">Analyses PESTEL, Porter et SWOT</p>
+            <p class="section-desc">Analyses PESTEL, Forces de Porter et SWOT pour une compréhension approfondie</p>
         </div>
+
         <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.3rem;margin-bottom:1.5rem">Analyse SWOT</h3>
         <div class="swot-grid">
-            <div class="swot-card forces"><h4 class="swot-title forces">💪 Forces</h4><ul class="swot-list"><li>Puissance financière (4ème budget L1)</li><li>Expertise Red Bull éprouvée</li><li>Localisation Paris (1er bassin talents)</li><li>Image premium potentielle LVMH</li><li>Crise clubs français = opportunités</li></ul></div>
-            <div class="swot-card faiblesses"><h4 class="swot-title faiblesses">⚠️ Faiblesses</h4><ul class="swot-list"><li>Performance critique (14ème)</li><li>Infrastructure Charléty inadaptée</li><li>Base supporters inexistante</li><li>90% dépendance actionnaire</li><li>Effectif déséquilibré</li></ul></div>
-            <div class="swot-card opportunites"><h4 class="swot-title opportunites">🚀 Opportunités</h4><ul class="swot-list"><li>Market gap Paris historique</li><li>Synergies Luxe × Sport</li><li>Académie = plus-values</li><li>Gen Z anti-mainstream</li><li>60% Parisiens sans club</li></ul></div>
-            <div class="swot-card menaces"><h4 class="swot-title menaces">🔥 Menaces</h4><ul class="swot-list"><li>Relégation L2 catastrophique</li><li>Conflit Arnault vs Red Bull</li><li>Indifférence public</li><li>Fair-Play Financier UEFA</li><li>Blocage stade (Mairie)</li></ul></div>
+            <div class="swot-card forces">
+                <h4 class="swot-title forces">💪 Forces</h4>
+                <ul class="swot-list">
+                    <li>Puissance financière illimitée (Agache)</li>
+                    <li>Expertise sportive "savoir-gagner" (Red Bull)</li>
+                    <li>Localisation stratégique (Paris, vivier de talents)</li>
+                    <li>Image de marque potentielle (Paris + Arnault)</li>
+                </ul>
+            </div>
+            <div class="swot-card faiblesses">
+                <h4 class="swot-title faiblesses">⚠️ Faiblesses</h4>
+                <ul class="swot-list">
+                    <li>Performance sportive critique (14e L1)</li>
+                    <li>Infrastructure inadaptée (Stade Charléty)</li>
+                    <li>Faible base de fans et revenus structurels</li>
+                    <li>Effectif déséquilibré et gouvernance en transition</li>
+                </ul>
+            </div>
+            <div class="swot-card opportunites">
+                <h4 class="swot-title opportunites">🚀 Opportunités</h4>
+                <ul class="swot-list">
+                    <li>Marché parisien sous-exploité (seul club d'élite)</li>
+                    <li>Crise des clubs français (acquisitions)</li>
+                    <li>Demande d'authenticité et d'alternative au PSG</li>
+                    <li>Outils Red Bull (scouting, performance)</li>
+                </ul>
+            </div>
+            <div class="swot-card menaces">
+                <h4 class="swot-title menaces">🔥 Menaces</h4>
+                <ul class="swot-list">
+                    <li>Contraintes infrastructurelles (Charléty)</li>
+                    <li>Baisse des droits TV et FPF strict</li>
+                    <li>Concurrence du divertissement</li>
+                    <li>Pression RSE des sponsors</li>
+                </ul>
+            </div>
         </div>
+        <p style="text-align:center;font-size:.8rem;color:rgba(255,255,255,.6);margin-top:1.5rem">Cliquez sur le bouton "PESTEL" ou "Porter" en bas à droite pour voir les analyses détaillées</p>
     </section>
 
     <!-- PARTIE 4 -->
     <section id="partie4" class="dark-bg">
         <div class="section-header">
             <span class="section-number">PARTIE 4</span>
-            <h2 class="section-title">Positionnement Stratégique</h2>
-            <p class="section-desc">Matrice McKinsey et allocation des ressources</p>
+            <h2 class="section-title">Positionnement Stratégique : Matrice McKinsey</h2>
+            <p class="section-desc">Allocation des Ressources par DAS</p>
         </div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin-bottom:1.5rem">Domaines d'Activité Stratégique</h3>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead><tr><th>DAS</th><th>Attractivité Marché</th><th>Position Concurrentielle</th><th>Recommandation</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Équipe Masculine (L1)</strong></td>
+                        <td>Élevée (Forts droits TV, visibilité mondiale)</td>
+                        <td>Moyenne (Nouveau promu/ambitieux, budget top 7)</td>
+                        <td style="color:#22c55e;font-weight:600">Investir pour la croissance (Viser l'Europe)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Équipe Féminine</strong></td>
+                        <td>Moyenne (En forte croissance)</td>
+                        <td>Forte (Historiquement dans le top 3 français)</td>
+                        <td style="color:#eab308;font-weight:600">Maintenir la domination et professionnaliser</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Formation (Academy)</strong></td>
+                        <td>Maximale (L'Île-de-France est le 1er vivier mondial)</td>
+                        <td>Forte (Infrastructures Orly 2026)</td>
+                        <td style="color:#22c55e;font-weight:600">Axe prioritaire : Générer de la valeur (trading)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin:2rem 0 1rem">Répartition Budgétaire Recommandée (130M€)</h3>
         <div class="das-grid">
-            <div class="das-card green"><span class="das-badge invest">🥇 Investir</span><h3 class="das-title">DAS 1 : Formation & Trading</h3><p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 40M€ CAPEX. Objectif : 100 jeunes académie 2028, 30M€+ plus-values/an.</p></div>
-            <div class="das-card yellow"><span class="das-badge select">🥈 Redresser</span><h3 class="das-title">DAS 2 : Équipe Pro L1</h3><p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 70M€/an. Profils Red Bull 20-24 ans. Objectif : Top 4 en 2028.</p></div>
-            <div class="das-card yellow"><span class="das-badge select">🥉 Préparer</span><h3 class="das-title">DAS 3 : Marque & Merch</h3><p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 10M€. Lancement SI Top 8. Partenariat LV×PFC en attente.</p></div>
-            <div class="das-card red"><span class="das-badge maintain">4️⃣ Maintenir</span><h3 class="das-title">DAS 4 : Stade Charléty</h3><p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 10M€ maintenance. Préparer sortie 2028. 3 scénarios alternatifs.</p></div>
+            <div class="das-card green">
+                <span class="das-badge invest">🥇 Forte</span>
+                <h3 class="das-title">Formation & Trading</h3>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 40M€ CAPEX. Objectif : 100 jeunes académie 2028, 30M€+ plus-values/an.</p>
+            </div>
+            <div class="das-card yellow">
+                <span class="das-badge select">🥈 Réorientation</span>
+                <h3 class="das-title">Équipe Pro (L1)</h3>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 70M€/an. Profils Red Bull 20-24 ans. Objectif : Top 4 en 2028.</p>
+            </div>
+            <div class="das-card yellow">
+                <span class="das-badge select">🥉 Modérée</span>
+                <h3 class="das-title">Marque & Merchandising</h3>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 10M€. Lancement SI Top 8. Partenariat LV×PFC en attente.</p>
+            </div>
+            <div class="das-card red">
+                <span class="das-badge maintain">4️⃣ Gel/Réduction</span>
+                <h3 class="das-title">Stade (Charléty)</h3>
+                <p style="font-size:.8rem;color:rgba(255,255,255,.8)">Budget : 10M€ maintenance. Préparer sortie 2028. 3 scénarios alternatifs.</p>
+            </div>
         </div>
     </section>
 
@@ -308,16 +498,45 @@
         <div class="section-header">
             <span class="section-number">PARTIE 5</span>
             <h2 class="section-title">Enjeux Humains et Culturels</h2>
-            <p class="section-desc">Choc culturel Red Bull/Arnault et gouvernance</p>
+            <p class="section-desc">Le Choc des Titans : Red Bull vs Arnault</p>
         </div>
-        <div class="grid" style="max-width:900px">
-            <div class="card" style="border-left:4px solid #9333ea"><div class="card-label">ADN Arnault</div><p class="card-detail">Vision décennale, héritage, excellence, luxe, verticalité.</p></div>
-            <div class="card" style="border-left:4px solid #ef4444"><div class="card-label">ADN Red Bull</div><p class="card-detail">Performance immédiate, data, jeunesse, trading, disruption.</p></div>
-            <div class="card" style="border-left:4px solid var(--pfc-gold)"><div class="card-label">Synthèse PFC</div><p class="card-detail">"L'Élégance de la Performance" - Muraille de Chine décisionnelle.</p></div>
+
+        <div class="grid" style="max-width:900px;margin-bottom:2rem">
+            <div class="card" style="border-left:4px solid #9333ea">
+                <div class="card-label">ADN Groupe Arnault (LVMH / Agache)</div>
+                <p class="card-detail"><strong>Vision :</strong> Temps long, héritage, excellence, image lisse.</p>
+                <p class="card-detail"><strong>Méthode :</strong> Contrôle centralisé, culture du secret, investissement patient.</p>
+                <p class="card-detail" style="color:#ef4444;margin-top:.5rem"><strong>Risque PFC :</strong> "Faire joli avant d'être efficace", ingérence marketing.</p>
+            </div>
+            <div class="card" style="border-left:4px solid #ef4444">
+                <div class="card-label">ADN Red Bull (Sport)</div>
+                <p class="card-detail"><strong>Vision :</strong> Performance immédiate, data, jeunesse, trading, disruption.</p>
+                <p class="card-detail"><strong>Méthode :</strong> Décentralisation opérationnelle, transparence interne, investissement agressif.</p>
+                <p class="card-detail" style="color:#ef4444;margin-top:.5rem"><strong>Risque PFC :</strong> "Usine à trading" sans âme, approche "froide".</p>
+            </div>
         </div>
-        <div style="max-width:800px;margin:2rem auto;padding:1.5rem;background:rgba(196,167,105,.1);border:1px solid rgba(196,167,105,.25);border-radius:10px">
-            <h4 style="color:var(--pfc-gold);font-family:'Bebas Neue';margin-bottom:.5rem">🧱 Muraille de Chine</h4>
-            <p style="font-size:.85rem;color:rgba(255,255,255,.85)"><strong style="color:#ef4444">⚽ Terrain = Red Bull :</strong> Recrutement, effectif, entraîneur, méthode.<br><strong style="color:#9333ea">🎩 Tribune = Arnault :</strong> Design, merchandising, partenariats, communication.</p>
+
+        <div style="max-width:900px;margin:2rem auto;padding:1.5rem;background:rgba(196,167,105,.1);border:1px solid rgba(196,167,105,.25);border-radius:10px">
+            <h4 style="color:var(--pfc-gold);font-family:'Bebas Neue';margin-bottom:1rem;text-align:center">🧱 Solution : Muraille de Chine Décisionnelle</h4>
+            <div class="grid" style="max-width:100%">
+                <div style="text-align:center;padding:1rem;background:rgba(239,68,68,.1);border-radius:8px">
+                    <h5 style="color:#ef4444;font-family:'Bebas Neue';margin-bottom:.3rem">⚽ Le Terrain : Red Bull</h5>
+                    <p style="font-size:.8rem;color:rgba(255,255,255,.8)">Contrôle total du sportif (recrutement, effectif, entraîneur, académie, trading)</p>
+                </div>
+                <div style="text-align:center;padding:1rem;background:rgba(147,51,234,.1);border-radius:8px">
+                    <h5 style="color:#9333ea;font-family:'Bebas Neue';margin-bottom:.3rem">🎩 La Tribune : Arnault</h5>
+                    <p style="font-size:.8rem;color:rgba(255,255,255,.8)">Gestion de l'image, expérience stade, merchandising, partenariats luxe, communication</p>
+                </div>
+                <div style="text-align:center;padding:1rem;background:rgba(196,167,105,.1);border-radius:8px">
+                    <h5 style="color:var(--pfc-gold);font-family:'Bebas Neue';margin-bottom:.3rem">⚖️ L'Arbitre : Ferracci</h5>
+                    <p style="font-size:.8rem;color:rgba(255,255,255,.8)">Garant de la transition, arbitrage en cas de désaccord (jusqu'en 2027)</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="max-width:800px;margin:2rem auto;padding:1.5rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);border-radius:10px">
+            <h4 style="color:#3b82f6;font-family:'Bebas Neue';margin-bottom:.5rem">🏘️ Acceptabilité Sociale et Ancrage Local</h4>
+            <p style="font-size:.85rem;color:rgba(255,255,255,.85)">Le Paris FC doit être le club des banlieues. <strong>Actions :</strong> joueurs ambassadeurs locaux, programme "PFC dans ton Quartier", navettes gratuites. <strong>Objectif :</strong> 60% des spectateurs de banlieue.</p>
         </div>
     </section>
 
@@ -326,46 +545,106 @@
         <div class="section-header">
             <span class="section-number">PARTIE 6</span>
             <h2 class="section-title">Vision et Orientations Stratégiques</h2>
-            <p class="section-desc">Vision 2028 et KPIs de pilotage</p>
+            <p class="section-desc">La feuille de route pour l'avenir et les grandes lignes de la transformation</p>
         </div>
+
         <div class="conclusion" style="margin-bottom:2rem">
-            <p>"Devenir le <strong>Borussia Dortmund français</strong> : intense, populaire, formateur, capable de rivaliser avec l'élite européenne."</p>
+            <p>"Devenir le <strong>Borussia Dortmund français</strong> d'ici 2028 : intense, populaire, formateur, capable de rivaliser avec l'élite européenne."</p>
             <cite>— Vision Paris FC 2028 —</cite>
         </div>
-        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.3rem;margin-bottom:1.5rem">Dashboard KPIs</h3>
-        <div class="kpi-tabs">
-            <div class="kpi-tab active" data-tab="sportif">🏆 Sportif</div>
-            <div class="kpi-tab" data-tab="image">✨ Image</div>
-            <div class="kpi-tab" data-tab="eco">💰 Économie</div>
-            <div class="kpi-tab" data-tab="formation">🎓 Formation</div>
-        </div>
-        <div class="kpi-panel active" id="panel-sportif">
-            <div class="kpi-grid">
-                <div class="kpi-card"><div class="kpi-label">Classement L1</div><div class="kpi-values"><span class="kpi-current">14ème</span><span class="kpi-arrow">→</span><span class="kpi-target">Top 5</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:15%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Points L1</div><div class="kpi-values"><span class="kpi-current">25</span><span class="kpi-arrow">→</span><span class="kpi-target">65+</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:38%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Âge Moyen</div><div class="kpi-values"><span class="kpi-current">26,5</span><span class="kpi-arrow">→</span><span class="kpi-target">&lt;23</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:35%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Valeur Effectif</div><div class="kpi-values"><span class="kpi-current">80M€</span><span class="kpi-arrow">→</span><span class="kpi-target">250M€</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:32%"></div></div></div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin-bottom:1.5rem">Les 3 Piliers de l'Identité</h3>
+        <div class="piliers-grid">
+            <div class="pilier-card" style="border-top:3px solid #ef4444">
+                <h4>⚡ L'Intensité (ADN Red Bull)</h4>
+                <p>Jeu agressif, rapide, spectaculaire. Pressing haut, physique au-dessus de la moyenne L1.</p>
+            </div>
+            <div class="pilier-card" style="border-top:3px solid #9333ea">
+                <h4>✨ L'Élégance (ADN Arnault)</h4>
+                <p>Marque transcendant le sport, connectée à la mode parisienne. Premium mais pas arrogant.</p>
+            </div>
+            <div class="pilier-card" style="border-top:3px solid var(--pfc-gold)">
+                <h4>🏠 L'Appartenance (Ancrage Local)</h4>
+                <p>Club du "Grand Paris", inclusif et diversifié. Reflet de l'identité francilienne.</p>
             </div>
         </div>
-        <div class="kpi-panel" id="panel-image">
-            <div class="kpi-grid">
-                <div class="kpi-card"><div class="kpi-label">Followers</div><div class="kpi-values"><span class="kpi-current">500K</span><span class="kpi-arrow">→</span><span class="kpi-target">2M</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:25%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Affluence</div><div class="kpi-values"><span class="kpi-current">8K</span><span class="kpi-arrow">→</span><span class="kpi-target">16K</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:50%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Maillots/an</div><div class="kpi-values"><span class="kpi-current">15K</span><span class="kpi-arrow">→</span><span class="kpi-target">100K</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:15%"></div></div></div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin:3rem 0 1.5rem">Objectifs Stratégiques par Axe (3 ans)</h3>
+        <div class="grid" style="max-width:1000px">
+            <div class="card" style="border-left:4px solid #22c55e">
+                <div class="card-label">Axe 1 : Sportif</div>
+                <ul style="list-style:none;font-size:.8rem">
+                    <li style="padding:.2rem 0"><strong>2026 :</strong> Maintien L1 (10-12ème), stabiliser équipe, lancer Campus</li>
+                    <li style="padding:.2rem 0"><strong>2027 :</strong> Top 8 L1, moyenne d'âge 24 ans, 3-4 jeunes en pro</li>
+                    <li style="padding:.2rem 0"><strong>2028 :</strong> Top 4 L1, LDC/EL, moyenne d'âge <23 ans, 2+ joueurs en EDF</li>
+                </ul>
+            </div>
+            <div class="card" style="border-left:4px solid #3b82f6">
+                <div class="card-label">Axe 2 : Image & Marque</div>
+                <ul style="list-style:none;font-size:.8rem">
+                    <li style="padding:.2rem 0"><strong>2026 :</strong> 1M followers, 70% remplissage, refonte identité visuelle</li>
+                    <li style="padding:.2rem 0"><strong>2027 :</strong> 2M followers, 80% remplissage, lancement merchandising premium</li>
+                    <li style="padding:.2rem 0"><strong>2028 :</strong> 5M followers, >90% remplissage, marque lifestyle mondiale</li>
+                </ul>
+            </div>
+            <div class="card" style="border-left:4px solid var(--pfc-gold)">
+                <div class="card-label">Axe 3 : Économique & Infrastructure</div>
+                <ul style="list-style:none;font-size:.8rem">
+                    <li style="padding:.2rem 0"><strong>2026 :</strong> 15M€ revenus commerciaux, études stade, début Campus</li>
+                    <li style="padding:.2rem 0"><strong>2027 :</strong> 25M€ revenus commerciaux, 1ère plus-value transfert, décision stade</li>
+                    <li style="padding:.2rem 0"><strong>2028 :</strong> 45M€ revenus commerciaux, rentabilité opérationnelle, nouveau stade</li>
+                </ul>
             </div>
         </div>
-        <div class="kpi-panel" id="panel-eco">
-            <div class="kpi-grid">
-                <div class="kpi-card"><div class="kpi-label">Budget Global</div><div class="kpi-values"><span class="kpi-current">150M€</span><span class="kpi-arrow">→</span><span class="kpi-target">220M€</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:68%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Revenus Sponsoring</div><div class="kpi-values"><span class="kpi-current">15M€</span><span class="kpi-arrow">→</span><span class="kpi-target">40M€</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:37%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Dépendance Actionnaire</div><div class="kpi-values"><span class="kpi-current">90%</span><span class="kpi-arrow">→</span><span class="kpi-target">&lt;50%</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:20%"></div></div></div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin:3rem 0 1.5rem">Leviers de Croissance des Revenus</h3>
+        <div class="leviers-grid">
+            <div class="levier-card">
+                <h5>💰 Trading de Joueurs</h5>
+                <p>2-3 ventes majeures/an (20M€+)</p>
+            </div>
+            <div class="levier-card">
+                <h5>💎 Partenariats Luxe × Sport</h5>
+                <p>Synergies LVMH, merchandising premium</p>
+            </div>
+            <div class="levier-card">
+                <h5>🏟️ Matchday Premium</h5>
+                <p>Nouveau stade, loges VIP, hospitalités</p>
+            </div>
+            <div class="levier-card">
+                <h5>📱 Digital & E-sport</h5>
+                <p>Monétisation réseaux, équipe e-sport, NFT</p>
+            </div>
+            <div class="levier-card">
+                <h5>🇪🇺 Compétitions Européennes</h5>
+                <p>LDC : 50M€+, EL : 15-20M€</p>
             </div>
         </div>
-        <div class="kpi-panel" id="panel-formation">
-            <div class="kpi-grid">
-                <div class="kpi-card"><div class="kpi-label">Joueurs Formés Pro</div><div class="kpi-values"><span class="kpi-current">2-3</span><span class="kpi-arrow">→</span><span class="kpi-target">5+</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:50%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Revenus Trading</div><div class="kpi-values"><span class="kpi-current">5M€</span><span class="kpi-arrow">→</span><span class="kpi-target">25M€+</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:20%"></div></div></div>
-                <div class="kpi-card"><div class="kpi-label">Jeunes Académie</div><div class="kpi-values"><span class="kpi-current">30</span><span class="kpi-arrow">→</span><span class="kpi-target">100+</span></div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:30%"></div></div></div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin:3rem 0 1.5rem">Ambition à l'Horizon 2028</h3>
+        <div class="grid" style="max-width:1000px">
+            <div class="card">
+                <div class="card-label">🏆 Sportive</div>
+                <ul style="list-style:none;font-size:.85rem">
+                    <li>• Top 4 Ligue 1, qualification LDC</li>
+                    <li>• 2+ joueurs formés en EDF</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-label">💶 Économique</div>
+                <ul style="list-style:none;font-size:.85rem">
+                    <li>• Rentabilité opérationnelle</li>
+                    <li>• Revenus commerciaux : 45M€/an</li>
+                    <li>• Valeur du club : 500M€+</li>
+                </ul>
+            </div>
+            <div class="card">
+                <div class="card-label">✨ Marque & Formation</div>
+                <ul style="list-style:none;font-size:.85rem">
+                    <li>• Marque lifestyle internationale</li>
+                    <li>• 100k+ maillots vendus/an</li>
+                    <li>• Club formateur n°1 France</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -375,7 +654,7 @@
         <div class="section-header">
             <span class="section-number">PARTIE 7</span>
             <h2 class="section-title">Plan d'Action Stratégique</h2>
-            <p class="section-desc">Feuille de route détaillée par phase</p>
+            <p class="section-desc">Détails des initiatives et étapes clés pour la mise en œuvre</p>
         </div>
         <div class="plan-tabs">
             <div class="plan-tab active" data-year="2026">2025-2026<span>🚑 Sauvetage</span></div>
@@ -384,28 +663,95 @@
         </div>
         <div class="plan-panel active" id="plan-2026">
             <div class="plan-grid">
-                <div class="plan-cat"><h4 class="plan-cat-title">⚽ Sportif</h4><ul class="plan-list"><li>Mercato hivernal : 20M€</li><li>2 défenseurs centraux leaders</li><li>1 milieu + 1 attaquant</li><li>Évaluation entraîneur</li><li>20 jeunes U15-U17</li></ul></div>
-                <div class="plan-cat"><h4 class="plan-cat-title">✨ Image</h4><ul class="plan-list"><li>Campagne "Le Renouveau"</li><li>Refonte réseaux sociaux</li><li>Objectif : 1M followers</li><li>PAS de lancement premium</li></ul></div>
+                <div class="plan-cat"><h4 class="plan-cat-title">⚽ Sportif</h4><ul class="plan-list"><li>Mercato hivernal agressif (20M€)</li><li>Recrutement DS Red Bull et D. Commercial Arnault</li><li>Lancement études stade et Campus</li><li>Objectif : Maintien L1 (10-12ème)</li></ul></div>
+                <div class="plan-cat"><h4 class="plan-cat-title">✨ Image</h4><ul class="plan-list"><li>Campagne "Le Renouveau"</li><li>Refonte réseaux sociaux</li><li>Objectif : 1M followers</li><li>70% remplissage Charléty</li></ul></div>
                 <div class="plan-cat"><h4 class="plan-cat-title">💰 Économie</h4><ul class="plan-list"><li>Budget : 150M€</li><li>Revenus : 15M€</li><li>Audit masse salariale</li><li>Études faisabilité Stade</li><li>Début Campus (10M€)</li></ul></div>
             </div>
         </div>
         <div class="plan-panel" id="plan-2027">
             <div class="plan-grid">
-                <div class="plan-cat"><h4 class="plan-cat-title">⚽ Sportif</h4><ul class="plan-list"><li>REFONTE : 60M€ achats</li><li>30M€ ventes</li><li>Profils Red Bull 20-24 ans</li><li>3-4 jeunes en pro</li><li>Académie : 80 jeunes</li></ul></div>
-                <div class="plan-cat"><h4 class="plan-cat-title">✨ Image</h4><ul class="plan-list"><li>Lancement marque (si Top 8)</li><li>Partenariat LV × PFC</li><li>Flagship Marais</li><li>Objectif : 2M followers</li></ul></div>
+                <div class="plan-cat"><h4 class="plan-cat-title">⚽ Sportif</h4><ul class="plan-list"><li>Mercato été (60M€ achats, 30M€ ventes)</li><li>Inauguration Campus de Performance</li><li>3-4 jeunes en pro</li><li>Objectif : Top 8 L1</li></ul></div>
+                <div class="plan-cat"><h4 class="plan-cat-title">✨ Image</h4><ul class="plan-list"><li>Lancement marque premium (si Top 8)</li><li>Partenariat LV × PFC</li><li>Flagship Marais</li><li>Objectif : 2M followers</li></ul></div>
                 <div class="plan-cat"><h4 class="plan-cat-title">💰 Économie</h4><ul class="plan-list"><li>Budget : 180M€</li><li>Revenus : 25M€</li><li>1ère plus-value : 15-20M€</li><li>Inauguration Campus</li><li>Décision finale Stade</li></ul></div>
             </div>
         </div>
         <div class="plan-panel" id="plan-2028">
             <div class="plan-grid">
-                <div class="plan-cat"><h4 class="plan-cat-title">⚽ Sportif</h4><ul class="plan-list"><li>Balance transferts +20M€</li><li>6+ joueurs formés en pro</li><li>2+ joueurs en EDF</li><li>Top 5 + Europe</li><li>Académie Top 3 France</li></ul></div>
-                <div class="plan-cat"><h4 class="plan-cat-title">✨ Image</h4><ul class="plan-list"><li>Boutiques Tokyo, NYC</li><li>Love Brand lifestyle</li><li>100K+ maillots/an</li><li>Objectif : 5M followers</li></ul></div>
-                <div class="plan-cat"><h4 class="plan-cat-title">💰 Économie</h4><ul class="plan-list"><li>Budget : 220M€</li><li>Revenus : 40M€</li><li>Rentabilité atteinte</li><li>FPF respecté</li><li>Nouveau stade (25-30K)</li></ul></div>
+                <div class="plan-cat"><h4 class="plan-cat-title">⚽ Sportif</h4><ul class="plan-list"><li>Mercato (40M€ achats, 60M€ ventes)</li><li>6+ joueurs formés en pro</li><li>2+ joueurs en EDF</li><li>Objectif : Top 4 L1 + Europe</li></ul></div>
+                <div class="plan-cat"><h4 class="plan-cat-title">✨ Image</h4><ul class="plan-list"><li>Internationalisation marque</li><li>Ouverture boutiques Tokyo, NYC</li><li>100K+ maillots/an</li><li>Objectif : 5M followers</li></ul></div>
+                <div class="plan-cat"><h4 class="plan-cat-title">💰 Économie</h4><ul class="plan-list"><li>Budget : 220M€</li><li>Revenus : 45M€</li><li>Rentabilité atteinte</li><li>FPF respecté</li><li>Nouveau stade opérationnel</li></ul></div>
             </div>
         </div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin:3rem 0 1.5rem">Risques et Plans de Contingence</h3>
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead><tr><th>Risque</th><th>Probabilité</th><th>Impact</th><th>Plan de Contingence</th></tr></thead>
+                <tbody>
+                    <tr><td>Relégation 2026</td><td style="color:#eab308">Moyenne (30%)</td><td style="color:#ef4444">Catastrophique</td><td>Mercato hivernal agressif, coach adapté</td></tr>
+                    <tr><td>Conflit Arnault/Red Bull</td><td style="color:#22c55e">Faible (20%)</td><td style="color:#eab308">Élevé</td><td>Muraille de Chine, arbitrage Ferracci</td></tr>
+                    <tr><td>Blocage Stade</td><td style="color:#ef4444">Élevée (50%)</td><td style="color:#eab308">Moyen</td><td>3 scénarios alternatifs, lobbying renforcé</td></tr>
+                    <tr><td>Indifférence Public</td><td style="color:#eab308">Moyenne (35%)</td><td style="color:#eab308">Élevé</td><td>Résultats sportifs, activation communautaire</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3 style="text-align:center;color:var(--pfc-gold);font-family:'Bebas Neue';font-size:1.2rem;margin:3rem 0 1.5rem">Facteurs Clés de Succès</h3>
+        <div class="fcs-grid">
+            <div class="fcs-card">
+                <h5>⏳ Patience Actionnaire</h5>
+                <p>Accepter pertes 2-3 ans, vision long terme</p>
+            </div>
+            <div class="fcs-card">
+                <h5>⚽ Autonomie Sportive</h5>
+                <p>Red Bull/Klopp dernier mot sur recrutements</p>
+            </div>
+            <div class="fcs-card">
+                <h5>🏘️ Adhésion Populaire</h5>
+                <p>Ancrage banlieue, street culture</p>
+            </div>
+            <div class="fcs-card">
+                <h5>🤝 Cohérence Culturelle</h5>
+                <p>Équilibre Performance (RB) + Prestige (Arnault)</p>
+            </div>
+            <div class="fcs-card">
+                <h5>🏟️ Décision Infrastructure</h5>
+                <p>Trancher définitivement stade avant 2027</p>
+            </div>
+        </div>
+
         <div class="conclusion" style="margin-top:3rem">
-            <p>"Ce plan ne vend pas du rêve. Il expose un diagnostic lucide et propose une méthode rigoureuse. En 2028, le Paris FC sera européen, formateur, rentable et fier de ses racines."</p>
+            <p>"Le Paris FC sera un club européen, formateur, rentable, et fier de ses racines parisiennes en 2028."</p>
             <cite>— De la Crise à l'Institution —</cite>
+        </div>
+    </section>
+
+    <!-- PARTIE 8 - KPIs -->
+    <section id="kpis" class="dark-bg">
+        <div class="section-header">
+            <span class="section-number">KPIs</span>
+            <h2 class="section-title">Objectifs 2026-2028 : Métriques Clés du Paris FC</h2>
+            <p class="section-desc">Une progression ambitieuse pour transformer le Paris FC en un club de référence, tant sur le plan sportif que structurel, avec des jalons clairs sur trois ans.</p>
+        </div>
+
+        <div class="table-wrap">
+            <table class="data-table" style="width:100%">
+                <thead><tr><th>Indicateur</th><th>Unité</th><th>2026</th><th>2027</th><th>2028</th></tr></thead>
+                <tbody>
+                    <tr><td colspan="5" style="background:rgba(196,167,105,.15);color:var(--pfc-gold);font-weight:600">Performance Sportive</td></tr>
+                    <tr><td>Classement L1</td><td>Position</td><td>Top 10</td><td>Top 7</td><td style="color:#22c55e;font-weight:600">Top 5</td></tr>
+                    <tr><td>Points L1</td><td>Points</td><td>45-50</td><td>55-60</td><td style="color:#22c55e;font-weight:600">65+</td></tr>
+                    <tr><td colspan="5" style="background:rgba(196,167,105,.15);color:var(--pfc-gold);font-weight:600">Revenus</td></tr>
+                    <tr><td>Budget Global</td><td>M€</td><td>150</td><td>180</td><td style="color:#22c55e;font-weight:600">220</td></tr>
+                    <tr><td>Revenus Sponsoring</td><td>M€</td><td>15</td><td>25</td><td style="color:#22c55e;font-weight:600">40</td></tr>
+                    <tr><td colspan="5" style="background:rgba(196,167,105,.15);color:var(--pfc-gold);font-weight:600">Audience & Engagement</td></tr>
+                    <tr><td>Affluence Moyenne (Charléty)</td><td>Spectateurs</td><td>8,000</td><td>12,000</td><td style="color:#22c55e;font-weight:600">16,000</td></tr>
+                    <tr><td>Fans Réseaux Sociaux</td><td>Followers</td><td>500K</td><td>2M</td><td style="color:#22c55e;font-weight:600">5M</td></tr>
+                    <tr><td colspan="5" style="background:rgba(196,167,105,.15);color:var(--pfc-gold);font-weight:600">Académie & Trading</td></tr>
+                    <tr><td>Joueurs formés en pro</td><td>Nb. joueurs</td><td>2-3</td><td>4-5</td><td style="color:#22c55e;font-weight:600">5+</td></tr>
+                    <tr><td>Revenus trading joueurs</td><td>M€</td><td>5-10</td><td>15-20</td><td style="color:#22c55e;font-weight:600">25+</td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -417,10 +763,10 @@
                 <div><h3>Paris FC</h3><p>L'Élégance de la Performance<br>Stratégie 2025-2028</p></div>
             </div>
             <div class="footer-section"><h4>Parties 1-4</h4><ul class="footer-links"><li><a href="#partie1">1. Résumé</a></li><li><a href="#partie2">2. Contexte</a></li><li><a href="#partie3">3. Diagnostic</a></li><li><a href="#partie4">4. McKinsey</a></li></ul></div>
-            <div class="footer-section"><h4>Parties 5-7</h4><ul class="footer-links"><li><a href="#partie5">5. Enjeux</a></li><li><a href="#partie6">6. Vision</a></li><li><a href="#partie7">7. Plan</a></li></ul></div>
+            <div class="footer-section"><h4>Parties 5-8</h4><ul class="footer-links"><li><a href="#partie5">5. Enjeux</a></li><li><a href="#partie6">6. Vision</a></li><li><a href="#partie7">7. Plan</a></li><li><a href="#kpis">8. KPIs</a></li></ul></div>
             <div class="footer-section"><h4>Document</h4><ul class="footer-links"><li><a href="#">Confidentiel</a></li><li><a href="#">Décembre 2025</a></li></ul></div>
         </div>
-        <div class="footer-bottom">© 2025 Paris FC - Document Stratégique Confidentiel</div>
+        <div class="footer-bottom">© 2025 Paris FC - Document Stratégique Confidentiel | Alexandre Ardizzi, Nolan Nadal, Elouan Collet, Victor De freitas</div>
     </footer>
 
     <!-- MATRIX PANEL -->
@@ -439,10 +785,10 @@
             <div class="popup-header"><h3 class="popup-title">📋 Matrice SWOT</h3><button class="popup-close" id="close-swot">×</button></div>
             <div class="popup-body">
                 <div class="popup-grid-2">
-                    <div class="popup-card green"><h4>💪 FORCES</h4><ul><li>Puissance financière (4ème budget L1 : 130M€)</li><li>Expertise Red Bull éprouvée internationalement</li><li>Localisation Paris : 1er bassin talents mondial</li><li>Image premium potentielle (synergies LVMH)</li><li>Actionnariat stable vision long terme</li></ul></div>
-                    <div class="popup-card red"><h4>⚠️ FAIBLESSES</h4><ul><li>Performance critique (14ème, 3pts relégation)</li><li>Infrastructure Charléty inadaptée</li><li>Base supporters quasi-inexistante</li><li>90% dépendance actionnaire</li><li>Effectif déséquilibré</li></ul></div>
-                    <div class="popup-card blue"><h4>🚀 OPPORTUNITÉS</h4><ul><li>Market gap Paris (1 seul club élite)</li><li>Synergies Luxe × Sport uniques</li><li>Académie = plus-values 30-50M€/an</li><li>Gen Z anti-mainstream</li><li>60% Parisiens sans club identitaire</li></ul></div>
-                    <div class="popup-card yellow"><h4>🔥 MENACES</h4><ul><li>Relégation L2 = catastrophe</li><li>Conflit culturel Arnault vs Red Bull</li><li>Indifférence public si résultats tardent</li><li>Fair-Play Financier UEFA (2028)</li><li>Blocage stade (Mairie propriétaire)</li></ul></div>
+                    <div class="popup-card green"><h4>💪 FORCES</h4><ul><li>Puissance financière illimitée (Agache)</li><li>Expertise sportive "savoir-gagner" (Red Bull)</li><li>Localisation stratégique (Paris, vivier de talents)</li><li>Image de marque potentielle (Paris + Arnault)</li></ul></div>
+                    <div class="popup-card red"><h4>⚠️ FAIBLESSES</h4><ul><li>Performance sportive critique (14e L1)</li><li>Infrastructure inadaptée (Stade Charléty)</li><li>Faible base de fans et revenus structurels</li><li>Effectif déséquilibré et gouvernance en transition</li></ul></div>
+                    <div class="popup-card blue"><h4>🚀 OPPORTUNITÉS</h4><ul><li>Marché parisien sous-exploité (seul club d'élite)</li><li>Crise des clubs français (acquisitions)</li><li>Demande d'authenticité et d'alternative au PSG</li><li>Outils Red Bull (scouting, performance)</li></ul></div>
+                    <div class="popup-card yellow"><h4>🔥 MENACES</h4><ul><li>Contraintes infrastructurelles (Charléty)</li><li>Baisse des droits TV et FPF strict</li><li>Concurrence du divertissement</li><li>Pression RSE des sponsors</li></ul></div>
                 </div>
             </div>
         </div>
@@ -453,14 +799,16 @@
         <div class="popup-box">
             <div class="popup-header"><h3 class="popup-title">🌍 Analyse PESTEL</h3><button class="popup-close" id="close-pestel">×</button></div>
             <div class="popup-body">
+                <p style="text-align:center;color:rgba(255,255,255,.7);font-size:.8rem;margin-bottom:1.5rem">Environnement Externe du Paris FC</p>
                 <div class="popup-grid-3">
-                    <div class="popup-card"><h4 style="color:#9333ea">🏛️ Politique</h4><ul><li><strong>+</strong> Soutien Mairie/Région potentiel</li><li><strong>-</strong> Blocage Charléty possible</li><li><strong>-</strong> Sensibilité électorale stades</li></ul></div>
-                    <div class="popup-card"><h4 style="color:#22c55e">💶 Économique</h4><ul><li><strong>+</strong> Solidité Agache = avantage</li><li><strong>-</strong> Baisse droits TV (DAZN)</li><li><strong>-</strong> Fair-Play Financier 3 ans</li></ul></div>
-                    <div class="popup-card"><h4 style="color:#3b82f6">👥 Socioculturel</h4><ul><li><strong>+</strong> Fracture PSG/base populaire</li><li><strong>+</strong> Gen Z cherche authenticité</li><li><strong>-</strong> Risque "jouet milliardaires"</li></ul></div>
-                    <div class="popup-card"><h4 style="color:#eab308">💻 Technologique</h4><ul><li><strong>+</strong> Outils Red Bull = 5 ans avance</li><li><strong>+</strong> Data analytics, IA scouting</li><li><strong>-</strong> Charléty = passoire tech</li></ul></div>
-                    <div class="popup-card"><h4 style="color:var(--pfc-gold)">🌱 Écologique</h4><ul><li><strong>+</strong> Différenciation RSE possible</li><li><strong>-</strong> Charléty passoire énergétique</li><li><strong>-</strong> Exigences ESG LVMH élevées</li></ul></div>
-                    <div class="popup-card"><h4 style="color:#ef4444">⚖️ Légal</h4><ul><li><strong>+</strong> Cadre juridique stable</li><li><strong>-</strong> Multi-propriété Red Bull</li><li><strong>-</strong> Étanchéité UEFA stricte</li></ul></div>
+                    <div class="popup-card"><h4 style="color:#9333ea">🏛️ Politique</h4><ul><li><strong style="color:#22c55e">Opportunités :</strong> Soutien institutionnel tacite (Mairie, Région), stabilité réglementaire</li><li><strong style="color:#ef4444">Menaces :</strong> Impasse infrastructurelle (Charléty), sensibilité politique</li></ul></div>
+                    <div class="popup-card"><h4 style="color:#22c55e">💶 Économique</h4><ul><li><strong style="color:#22c55e">Opportunités :</strong> Solidité financière Agache, crise des clubs français (acquisitions)</li><li><strong style="color:#ef4444">Menaces :</strong> Baisse droits TV, inflation salariale, Fair-Play Financier</li></ul></div>
+                    <div class="popup-card"><h4 style="color:#3b82f6">👥 Socioculturel</h4><ul><li><strong style="color:#22c55e">Opportunités :</strong> Fracture identitaire (public PSG vs populaire), demande d'authenticité</li><li><strong style="color:#ef4444">Menaces :</strong> Risque de gentrification, concurrence divertissement</li></ul></div>
+                    <div class="popup-card"><h4 style="color:#eab308">💻 Technologique</h4><ul><li><strong style="color:#22c55e">Opportunités :</strong> Outils Red Bull (scouting, performance), digitalisation fan engagement</li><li><strong style="color:#ef4444">Menaces :</strong> Retard infrastructure (Charléty), protection données</li></ul></div>
+                    <div class="popup-card"><h4 style="color:var(--pfc-gold)">🌱 Écologique</h4><ul><li><strong style="color:#22c55e">Opportunités :</strong> Différenciation RSE</li><li><strong style="color:#ef4444">Menaces :</strong> Pression RSE (sponsors LVMH), Charléty passoire énergétique</li></ul></div>
+                    <div class="popup-card"><h4 style="color:#ef4444">⚖️ Légal</h4><ul><li><strong style="color:#22c55e">Opportunités :</strong> Cadre juridique stable</li><li><strong style="color:#ef4444">Menaces :</strong> Fair-Play Financier, multipropriété Red Bull, droit du travail</li></ul></div>
                 </div>
+                <p style="text-align:center;color:rgba(255,255,255,.6);font-size:.75rem;margin-top:1.5rem;font-style:italic">Synthèse PESTEL : Environnement globalement favorable mais avec des contraintes structurelles majeures (stade, FPF, multi-propriété).</p>
             </div>
         </div>
     </div>
@@ -470,12 +818,11 @@
         <div class="popup-box">
             <div class="popup-header"><h3 class="popup-title">⚔️ 5 Forces de Porter</h3><button class="popup-close" id="close-porter">×</button></div>
             <div class="popup-body">
-                <div class="popup-grid-2">
-                    <div class="popup-card red"><h4>🔴 Rivalité Concurrentielle : TRÈS FORTE</h4><ul><li>Zone Europe saturée (OM, OL, Monaco, Lille)</li><li>Aucune place "gratuite"</li><li>14ème = aucune attractivité recrutement</li><li>PSG capte 80% attention médiatique</li></ul></div>
-                    <div class="popup-card yellow"><h4>🟡 Pouvoir Fournisseurs : FORT</h4><ul><li>"Taxe Arnault" : prix doublent</li><li>Agents gonflent salaires</li><li>Club perçu comme "désespéré"</li><li>Concurrence PL/Bundesliga</li></ul></div>
-                    <div class="popup-card yellow"><h4>🟡 Pouvoir Clients : MOYEN</h4><ul><li>Offre loisirs Paris infinie</li><li>Coût de changement nul</li><li>Exigence qualité Gen Z élevée</li></ul></div>
-                    <div class="popup-card green"><h4>🟢 Nouveaux Entrants : FAIBLE</h4><ul><li>Barrières 100M€+ minimum</li><li>Homologation DNCG difficile</li><li>Aucun club IDF capable monter</li></ul></div>
-                </div>
+                <div class="popup-card green" style="margin-bottom:1rem"><h4>🟢 1. Menace des Nouveaux Entrants : FAIBLE À MODÉRÉE</h4><ul><li><strong>Faible à Modérée :</strong> Les barrières à l'entrée sont élevées (capital, infrastructure, agrément des ligues)</li><li><strong>Risque :</strong> L'émergence de nouveaux investisseurs riches ciblant le football français peut modifier l'équilibre</li></ul></div>
+                <div class="popup-card red" style="margin-bottom:1rem"><h4>🔴 2. Pouvoir de Négociation des Fournisseurs : ÉLEVÉ</h4><ul><li><strong>Élevé :</strong> Joueurs (notamment les talents confirmés), agents et membres du staff technique détiennent un fort pouvoir via les salaires, primes et commissions</li><li><strong>Contraintes :</strong> Le Fair-Play Financier limite les dépenses, mais la demande pour les meilleurs talents reste forte</li></ul></div>
+                <div class="popup-card yellow" style="margin-bottom:1rem"><h4>🟡 3. Pouvoir de Négociation des Clients : MODÉRÉ À ÉLEVÉ</h4><ul><li><strong>Fans :</strong> Influence sur les prix des billets et l'expérience. Le PFC doit se montrer attractif pour une fanbase moins établie que le PSG</li><li><strong>Sponsors :</strong> Fort pouvoir, exigeant visibilité et retour sur investissement important</li><li><strong>Diffuseurs :</strong> Très fort pouvoir, négociant les droits TV, source majeure de revenus pour les clubs</li></ul></div>
+                <div class="popup-card yellow" style="margin-bottom:1rem"><h4>🟡 4. Menace des Produits/Services de Substitution : ÉLEVÉE</h4><ul><li><strong>Élevée :</strong> Paris offre une multitude d'options de divertissement (autres sports, culture, loisirs)</li><li><strong>Concurrence Directe :</strong> Le PSG représente le principal substitut pour le football de haut niveau à Paris</li></ul></div>
+                <div class="popup-card red"><h4>🔴 5. Intensité de la Concurrence : TRÈS ÉLEVÉE</h4><ul><li><strong>Locale :</strong> Lutte acharnée avec le PSG pour l'attention des fans, les médias et les partenariats</li><li><strong>Nationale :</strong> Forte compétition en L1/L2 pour le classement, la promotion et les ressources (joueurs, financements)</li></ul></div>
             </div>
         </div>
     </div>
@@ -512,7 +859,7 @@
                         <tr><td>Revenus Sponsoring</td><td>M€</td><td>15</td><td>25</td><td style="color:#22c55e;font-weight:600">40</td></tr>
                         <tr><td colspan="5" style="background:rgba(196,167,105,.15);color:var(--pfc-gold);font-weight:600">Audience & Engagement</td></tr>
                         <tr><td>Affluence Moyenne</td><td>Spectateurs</td><td>8,000</td><td>12,000</td><td style="color:#22c55e;font-weight:600">16,000</td></tr>
-                        <tr><td>Fans Réseaux Sociaux</td><td>Followers</td><td>500K</td><td>1M</td><td style="color:#22c55e;font-weight:600">2M</td></tr>
+                        <tr><td>Fans Réseaux Sociaux</td><td>Followers</td><td>500K</td><td>2M</td><td style="color:#22c55e;font-weight:600">5M</td></tr>
                         <tr><td colspan="5" style="background:rgba(196,167,105,.15);color:var(--pfc-gold);font-weight:600">Académie & Trading</td></tr>
                         <tr><td>Joueurs formés en pro</td><td>Nb.</td><td>2-3</td><td>4-5</td><td style="color:#22c55e;font-weight:600">5+</td></tr>
                         <tr><td>Revenus trading</td><td>M€</td><td>5-10</td><td>15-20</td><td style="color:#22c55e;font-weight:600">25+</td></tr>
